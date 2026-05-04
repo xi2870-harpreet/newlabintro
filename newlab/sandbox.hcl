@@ -11,4 +11,8 @@ resource "container" "ubuntu" {
   network {
     id = resource.network.main.meta.id
   }
+
+  resource exec "install" {
+    script = scripts/environment_setup.sh
+  }
 }
