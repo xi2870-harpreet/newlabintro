@@ -10,6 +10,20 @@ resource "layout" "two_column" {
 
   column {
     width = 33
-    instructions {}
+   tab "terminal2" {
+      target = resource.terminal.shell2
+    }
+    instructions {
+    }
   }
+  column {
+    width = 34
+    tab "service" {
+      target = resource.service.nginx
+    }
+    instructions {
+    }
+  }
+  
+
 }
