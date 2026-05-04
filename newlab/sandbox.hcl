@@ -6,6 +6,7 @@ resource "container" "ubuntu" {
   image {
     name = "ubuntu"
   }
+  privileged = true
 
   network {
     id = resource.network.main.meta.id
